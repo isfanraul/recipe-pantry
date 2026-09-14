@@ -1,0 +1,253 @@
+{
+  "name": "recipe-pantry",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Create category",
+      "filename": "Create category.bru",
+      "seq": 9,
+      "request": {
+        "url": "{{url}}/api/categories",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"name\": \"Dilu\",\n  \"color\": \"#00ff00\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Create recipe",
+      "filename": "Create recipe.bru",
+      "seq": 4,
+      "request": {
+        "url": "{{url}}/api/recipes",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n    \"name\": \"Trilulilu\",\n    \"duration\": \"7 hours\",\n    \"pictures\": [\n      \"https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2024/09/THUMB-VIDEO-2_rev1-56.jpeg\"\n    ],\n    \"instructions\": \"Mix mascarpone, sugar, and egg yolks. Dip ladyfingers in coffee and layer with mascarpone mixture. Repeat and top with cocoa powder. Refrigerate for at least 4 hours before serving.\",\n    \"categories\": [\n      {\n        \"name\": \"Italian\"\n      },\n      {\n        \"name\": \"No-bake\"\n      }\n    ],\n    \"ingredients\": [\n      {\n        \"name\": \"sugar\",\n        \"unit\": \"g\",\n        \"quantity\": 150\n      },\n      {\n        \"name\": \"eggs\",\n        \"unit\": null,\n        \"quantity\": 3\n      }\n    ]\n  }",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete recipe",
+      "filename": "Delete recipe.bru",
+      "seq": 6,
+      "request": {
+        "url": "{{url}}/api/recipes/:id",
+        "method": "DELETE",
+        "headers": [],
+        "params": [
+          {
+            "name": "id",
+            "value": "2",
+            "type": "path",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Edit recipe",
+      "filename": "Edit recipe.bru",
+      "seq": 5,
+      "request": {
+        "url": "{{url}}/api/recipes/:id",
+        "method": "PUT",
+        "headers": [],
+        "params": [
+          {
+            "name": "id",
+            "value": "1",
+            "type": "path",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"name\": \"croco\",\n  \"categories\": \n  [\n    {\n      \"name\": \"Pie\"\n    },\n    {\n      \"name\": \"Italian\"\n    }\n  ]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get all categories",
+      "filename": "Get all categories.bru",
+      "seq": 7,
+      "request": {
+        "url": "{{url}}/api/categories",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get all recipes",
+      "filename": "Get all recipes.bru",
+      "seq": 2,
+      "request": {
+        "url": "{{url}}/api/recipes",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get recipe",
+      "filename": "Get recipe.bru",
+      "seq": 3,
+      "request": {
+        "url": "{{url}}/api/recipes/:id",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "id",
+            "value": "1",
+            "type": "path",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "activeEnvironmentUid": "G2IQ4o3iHuHfB2bfUvgyd",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "url",
+          "value": "http://127.0.0.1:5000",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "recipe-pantry"
+    }
+  ],
+  "root": {
+    "request": {
+      "vars": {
+        "req": [
+          {
+            "name": "url",
+            "value": "http://127.0.0.1:5000",
+            "enabled": true,
+            "local": false,
+            "uid": "FzYYCxTWL6CDTBNYUfYct"
+          }
+        ]
+      }
+    }
+  },
+  "brunoConfig": {
+    "version": "1",
+    "name": "recipe-pantry",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0014591217041015625,
+    "filesCount": 12
+  }
+}
