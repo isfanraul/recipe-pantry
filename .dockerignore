@@ -1,0 +1,14 @@
+# Keep local environments, dependencies, and generated output out of the image context.
+.git
+.gitignore
+.env
+.venv
+__pycache__
+*.pyc
+app/node_modules
+app/dist
+app/.env
+README.md
+recipes.csv
+recipes.json
+bruno_endpoints.json
